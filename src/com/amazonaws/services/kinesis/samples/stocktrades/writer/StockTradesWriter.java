@@ -104,11 +104,11 @@ public class StockTradesWriter {
         }
 
         AmazonKinesisClientBuilder clientBuilder = AmazonKinesisClientBuilder.standard();
-        
+
         clientBuilder.setRegion(regionName);
         clientBuilder.setCredentials(CredentialUtils.getCredentialsProvider());
         clientBuilder.setClientConfiguration(ConfigurationUtils.getClientConfigWithUserAgent());
-        
+
         AmazonKinesis kinesisClient = clientBuilder.build();
 
         // Validate that the stream exists and is active
